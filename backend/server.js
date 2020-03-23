@@ -22,9 +22,9 @@ app.get('/healthcheck', (req, res) => {
   res.send('App is running!');
 });
 
-// app.get('/api/healthcheck', (req, res) => {
-//   res.send('App is running!');
-// });
+app.get('/api/healthcheck', (req, res) => {
+  res.send('App is running!');
+});
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
