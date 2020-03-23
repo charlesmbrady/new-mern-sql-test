@@ -26,10 +26,10 @@ module.exports = {
     use_env_variable: 'JAWSDB_URL',
 
     details: {
-      host: 'u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-      username: 'oku92haxwe074gx6',
-      password: 'pt7uvw59en726iba',
-      database: 'pg69vfez19z9ktej',
+      // host: 'u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      // username: 'oku92haxwe074gx6',
+      // password: 'pt7uvw59en726iba',
+      // database: 'pg69vfez19z9ktej',
       port: 3306,
       dialect: 'mysql'
     }

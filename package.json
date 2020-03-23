@@ -1,5 +1,5 @@
 {
-  "name": "MERNolithic_sql",
+  "name": "MERNolithic_sql-test",
   "version": "1.0.0",
   "description": "",
   "main": "/backend/server.js",
@@ -51,15 +51,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlesmbrady/MERNolithic_sql.git"
+    "url": "git+https://github.com/charlesmbrady/MERNolithic_sql-tes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/charlesmbrady/MERNolithic_sql/issues"
+    "url": "https://github.com/charlesmbrady/MERNolithic_sql-test/issues"
   },
-  "homepage": "https://github.com/charlesmbrady/MERNolithic_sql#readme",
+  "homepage": "https://github.com/charlesmbrady/MERNolithic_sql-test#readme",
   "devDependencies": {
     "@cypress/code-coverage": "^1.14.0",
     "cy-report-setup-helper": "^1.3.4",
