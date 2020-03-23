@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://mernolithic-sql-staging.herokuapp.com",
+  "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+  "apiUrl": "https://mernolithic-sql-staging.herokuapp.com",
+  "env": {},
+  "reporterOptions": {
+    "reportDir": "cypress/reports/integration/reports/mocha",
+    "quiet": true,
+    "html": false,
+    "overwrite": false,
+    "json": true
+  },
+  "videosFolder": "cypress/reports/integration/public/videos",
+  "screenshotsFolder": "cypress/reports/integration/public/screenshots",
+  "videoCompression": false,
+  "browser": "electron",
+  "chromeWebSecurity": false
+}

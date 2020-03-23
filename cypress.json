@@ -1,0 +1,22 @@
+{
+  "baseUrl": "http://localhost:8081",
+  "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+  "apiUrl": "http://localhost:8080",
+  "env": {
+    "codeCoverage": {
+      "url": "http://localhost:8080/__coverage__"
+    }
+  },
+  "reporterOptions": {
+    "reportDir": "cypress/reports/integration/reports/mocha",
+    "quiet": true,
+    "html": false,
+    "overwrite": false,
+    "json": true
+  },
+  "videosFolder": "cypress/reports/integration/public/videos",
+  "screenshotsFolder": "cypress/reports/integration/public/screenshots",
+  "videoCompression": false,
+  "browser": "electron",
+  "chromeWebSecurity": false
+}

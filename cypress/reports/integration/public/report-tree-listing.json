@@ -1,0 +1,152 @@
+{
+  "path": "cypress/reports/integration/public",
+  "name": "public",
+  "children": [
+    {
+      "path": "cypress/reports/integration/public/assets",
+      "name": "assets",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/assets/MaterialIcons-Regular.woff",
+          "name": "MaterialIcons-Regular.woff",
+          "size": 57620,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/MaterialIcons-Regular.woff2",
+          "name": "MaterialIcons-Regular.woff2",
+          "size": 44300,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/app.css",
+          "name": "app.css",
+          "size": 82777,
+          "extension": ".css",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/app.js",
+          "name": "app.js",
+          "size": 369518,
+          "extension": ".js",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-light-webfont.woff",
+          "name": "roboto-light-webfont.woff",
+          "size": 25772,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-light-webfont.woff2",
+          "name": "roboto-light-webfont.woff2",
+          "size": 19508,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-medium-webfont.woff",
+          "name": "roboto-medium-webfont.woff",
+          "size": 26292,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-medium-webfont.woff2",
+          "name": "roboto-medium-webfont.woff2",
+          "size": 19944,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-regular-webfont.woff",
+          "name": "roboto-regular-webfont.woff",
+          "size": 26280,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-regular-webfont.woff2",
+          "name": "roboto-regular-webfont.woff2",
+          "size": 19868,
+          "extension": ".woff2",
+          "type": "file"
+        }
+      ],
+      "size": 691879,
+      "type": "directory"
+    },
+    {
+      "path": "cypress/reports/integration/public/report-tree-listing.json",
+      "name": "report-tree-listing.json",
+      "size": 3913,
+      "extension": ".json",
+      "type": "file"
+    },
+    {
+      "path": "cypress/reports/integration/public/report.html",
+      "name": "report.html",
+      "size": 10096,
+      "extension": ".html",
+      "type": "file"
+    },
+    {
+      "path": "cypress/reports/integration/public/report.json",
+      "name": "report.json",
+      "size": 8704,
+      "extension": ".json",
+      "type": "file"
+    },
+    {
+      "path": "cypress/reports/integration/public/screenshots",
+      "name": "screenshots",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
+          "name": "test-spec.js",
+          "children": [
+            {
+              "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
+              "name": "Users -- Can create user (failed).png",
+              "size": 53187,
+              "extension": ".png",
+              "type": "file"
+            }
+          ],
+          "size": 53187,
+          "type": "directory"
+        }
+      ],
+      "size": 53187,
+      "type": "directory"
+    },
+    {
+      "path": "cypress/reports/integration/public/videos",
+      "name": "videos",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
+          "name": "anotherTest-spec.js.mp4",
+          "size": 177391,
+          "extension": ".mp4",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
+          "name": "test-spec.js.mp4",
+          "size": 126935,
+          "extension": ".mp4",
+          "type": "file"
+        }
+      ],
+      "size": 304326,
+      "type": "directory"
+    }
+  ],
+  "size": 1072105,
+  "type": "directory"
+}

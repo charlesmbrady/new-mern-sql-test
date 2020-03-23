@@ -1,0 +1,35 @@
+.PortfolioItem {
+  background: rgba(255, 255, 255, 0.24);
+  width: 100%;
+  margin: 25px auto;
+  border-radius: 6px;
+  z-index: 99;
+  padding: 10px;
+}
+
+.links {
+  font-size: 20px;
+  margin-right: 15px;
+  z-index: 99;
+}
+p {
+  z-index: 99;
+}
+
+.portfolio-item-title {
+  margin: 10px auto;
+}
+.portfolio-item-description {
+  font-size: 25px;
+  text-align: left;
+  margin: 0 5%;
+}
+
+@media only screen and (min-width: 992px) {
+  .PortfolioItem {
+    width: 60%;
+  }
+  .portfolio-item-description {
+    margin: 0 10%;
+  }
+}

@@ -1,0 +1,7 @@
+---
+applications:
+- name: MERNolithic_sql-cy-reports
+  random-route: false
+  memory: 1G
+  instances: 1
+  path: ./cypress/reports/integration

@@ -1,0 +1,153 @@
+# Javascript Node CircleCI 2.0 configuration file
+# testing ci
+defaults: &defaults
+  docker:
+    - image: circleci/node:latest
+    - image: circleci/mysql:8.0.4
+      environment:
+        # MYSQL_ROOT_PASSWORD: rootpw
+        # MYSQL_DATABASE: mernolithic_test
+        # MYSQL_USER: user
+        # MYSQL_PASSWORD: passw0rd
+        TEST_DATABASE_URL: mysql://root@localhost/circle_test
+    - image: cypress/base:8
+
+  working_directory: ~/MERNolithic_sql
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install general dependencies
+          command: yarn install
+
+      - run:
+          name: Install frontend packages
+          command: cd frontend && yarn install
+
+      - run:
+          name: Install backend packages
+          command: cd backend && yarn install
+
+      - run:
+          name: Build frontend
+          command: cd frontend && yarn build
+
+  coverage_test:
+    <<: *defaults
+
+    steps:
+      # - attach_workspace:
+      #     at: ~/
+      - checkout
+
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
+            cd frontend && yarn install
+            cd ../backend && yarn install
+            cd ../
+            sudo apt-get update
+            sudo apt-get install libxtst6
+            sudo apt-get install libnss3
+            sudo apt-get install libgtk-3
+      - run:
+          name: Run cypress tests
+          command: yarn test:coverage
+      - store_artifacts:
+          path: coverage/lcov-report
+
+  cypress_tests:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run cypress tests
+          command: |
+            sudo apt-get update
+            sudo apt-get install libxtst6
+            yarn test:create-reports
+      - store_artifacts:
+          path: coverage/lcov-report
+      - store_artifacts:
+          path: cypress/reports/integration/public/
+      # - store_artifacts:
+      #     path: cypress/reports/integration/public/videos
+      # - store_artifacts:
+      #     path: cypress/reports/integration/public/screenshots
+      # - run:
+      #     name: Run backend
+      #     command: npm run backend
+      #     background: true
+      # - run:
+      #     name: Run frontend
+      #     command: npm run frontend
+      #     background: true
+      # - run:
+      #     name: Run UI tests
+      #     command: npm run ui-tests
+  # api_tests:
+  #   <<: *defaults
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: Run backend
+  #         command: npm run backend
+  #         background: true
+  #     - run:
+  #         name: Run local API tests
+  #         command: yarn wait-on http://localhost:3001 && npm run api-tests
+
+workflows:
+  version: 2
+  starter-workflow:
+    jobs:
+      - build
+      # - coverage_test:
+      #     requires:
+      #       - build
+      # - cypress_tests:
+      #     requires:
+      #       - build
+      # - js_unit_tests:
+      #     requires:
+      #       - build
+      # - backend_unit_tests:
+      #     requires:
+      #       - build
+      # - api_tests:
+      #     requires:
+      #       - build
+      # - ui_tests:
+      #     requires:
+      #       - build
+      # RECOMMENDED NODE config
+      # version: 2.1
+      # orbs:
+      #   node: circleci/node@1.1.6
+      # jobs:
+      #   build-and-test:
+      #     executor:
+      #       name: node/default
+      #     steps:
+      #       - checkout
+      #       - node/with-cache:
+      #           steps:
+      #             - run: npm install
+      #             - run: npm test
+      # workflows:
+      #     build-and-test:
+      #       jobs:
+      #         - build-and-test
